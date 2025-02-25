@@ -101,8 +101,8 @@ def report_analysis():
 
         return clean_json(response.text)
 
-    except:
-        return "Unknown error occured"
+    except Exception as e:
+        return f"Error occurred : {e}"
 
 
 @app.route('/recipie')
@@ -135,8 +135,8 @@ def recipie():
 
         return clean_json(response.text)
 
-    except:
-        return "Unknown error occurred"
+    except Exception as e:
+        return f"Error occurred : {e}"
     
 
 @app.route('/chatbot')
@@ -161,8 +161,8 @@ def chatbot():
 
         return response.text
 
-    except:
-        return "Unknown error occurred"
+    except Exception as e:
+        return f"Error occurred : {e}"
 
 
 
